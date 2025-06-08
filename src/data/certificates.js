@@ -23,12 +23,7 @@ const certificates = [
    image: aic,
    link: "https://www.credly.com/badges/d2856af3-2fbc-4ddc-a21b-3172a37e7cbe/public_url"
  },
- {
-   title: "Typing Certificate – Senior (English)",
-   description: "Achieved Senior-level proficiency in English typing, demonstrating accuracy, speed, and efficiency — an essential skill for developer productivity and communication.",
-   image: typing,
-   link: "#"
- },
+ 
  {
    title: "Soft Skills Certification",
    description: "Trained in key soft skills including communication, teamwork, problem-solving, and adaptability. This certificate complements my technical abilities with strong interpersonal competencies.",
