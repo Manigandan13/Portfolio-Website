@@ -1,16 +1,14 @@
-import React from 'react'
-import { motion } from "framer-motion";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
-import certificates from "../data/certificates"; 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay,Navigation  } from "swiper/modules";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import "swiper/css";
-import "swiper/css/autoplay";
-import { useRef } from "react";
-import { useInView } from "react-intersection-observer";
-
+import React, { useRef } from 'react';
+import { motion } from 'framer-motion';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import certificates from '../data/certificates';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation } from 'swiper/modules';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import { useInView } from 'react-intersection-observer';
 
 const Certificates = () => {
   const swiperRef = useRef(null);
@@ -46,7 +44,7 @@ const Certificates = () => {
         <Swiper
           modules={[Autoplay, Navigation]}
           slidesPerView={1}
-          spaceBetween={20}
+          spaceBetween={30}
           speed={1200}
           loop={true}
           onSwiper={(swiper) => {
@@ -62,67 +60,41 @@ const Certificates = () => {
               : false
           }
           breakpoints={{
-            640: { slidesPerView: 1.2 },
+            640: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
           className="w-full px-2"
         >
-          {certificates.map((cert, index) => {
-            const isHighlighted = cert.title
-              .toLowerCase()
-              .includes("java spring boot");
-
-            return (
-              <SwiperSlide key={index}>
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className={`relative flex flex-col h-full bg-gradient-to-br from-gray-800 via-gray-900 to-black border ${
-                    isHighlighted
-                      ? "border-yellow-500 ring-2 ring-yellow-500"
-                      : "border-cyan-700"
-                  } rounded-xl shadow-lg hover:shadow-cyan-500/30 transition-all`}
+          {certificates.map((cert, index) => (
+            <SwiperSlide key={index}>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex items-center justify-center bg-black border border-cyan-700 rounded-xl shadow-md hover:shadow-cyan-500/20 transition-all p-2"
+              >
+                <a
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full"
                 >
-                  {isHighlighted && (
-                    <span className="absolute top-2 right-2 bg-yellow-500 text-black text-xs font-bold px-2 py-1 rounded shadow-lg z-10">
-                      🌟 Highlighted
-                    </span>
-                  )}
-
-                  <div className="relative w-full aspect-video bg-black rounded-t-xl overflow-hidden">
-                    <a
-                      href={cert.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="absolute inset-0 flex items-center justify-center"
-                    >
-                      <LazyLoadImage
-                        src={cert.image}
-                        alt={cert.title}
-                        effect="blur"
-                        className="w-full h-full object-contain p-2"
-                      />
-                    </a>
-                  </div>
-
-                  <div className="p-4 text-center">
-                    <h3 className="text-sm sm:text-base font-medium text-cyan-300 truncate">
-                      {cert.title}
-                    </h3>
-                  </div>
-                </motion.div>
-              </SwiperSlide>
-            );
-          })}
+                  <LazyLoadImage
+                    src={cert.image}
+                    alt={`Certificate ${index + 1}`}
+                    effect="blur"
+                    className="w-full h-auto max-h-[600px] object-contain rounded"
+                  />
+                </a>
+              </motion.div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </section>
   );
 };
-
-
 
 export default Certificates;
