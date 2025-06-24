@@ -51,9 +51,9 @@ const projects = [
     description: "A full-stack crypto trading app with real-time prices, authentication, and transaction simulation using Spring Boot and React.",
     tech: ["React", "Tailwind", "Redux", "Spring Boot", "MySQL"],
     images: [at1, at2, at3, at4, at5, at6],
-    github: "https://github.com/Manigandan13/crypto",
-    backend: "https://github.com/Manigandan13/crypto-server",
-    live: "https://crypto-beta-wine.vercel.app",
+    github: "https://github.com/Manigandan13/Abi-Trade",
+    backend: "https://github.com/Manigandan13/Abi-Trade",
+    live: "https://abi-trade.vercel.app",
   },
   {
     title: "SSS College Website",
@@ -80,6 +80,14 @@ const projects = [
     github: "https://github.com/Manigandan13/Ecommerce_Frontend",
     backend: "https://github.com/Manigandan13/Ecommerce_Backend",
     live: "https://ecommerce-ui-neon.vercel.app/",
+  },
+  {
+  title: "Brew-Bliss",
+  description: "Brew-Bliss is a modern and stylish coffee shop website that lets users explore and experience coffee culture in their own way. Built for a smooth user experience with a touch of elegance.",
+  tech: ["React.js", "Tailwind CSS"],
+  images: ["https://i.ibb.co/Kp1PsH2v/Screenshot-227.png"],
+  github: "https://github.com/Manigandan13/Brew-Bliss",
+  live: "https://brew-bliss-one.vercel.app",
   },
   {
     title: "Automated Trading Bot (WIP)",
