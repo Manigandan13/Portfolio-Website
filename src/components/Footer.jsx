@@ -14,7 +14,7 @@ const Footer = () => {
         {/* Center - Social Icons */}
         <div className="flex space-x-6 text-xl">
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/Manigandan13"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white transition duration-300"
@@ -23,7 +23,7 @@ const Footer = () => {
             <FaGithub />
           </a>
           <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/mani-gandan-5b8833219"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white transition duration-300"
