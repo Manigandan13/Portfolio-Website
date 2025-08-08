@@ -89,6 +89,14 @@ const projects = [
   github: "https://github.com/Manigandan13/Brew-Bliss",
   live: "https://brew-bliss-one.vercel.app",
   },
+{
+  title: "Payslip Generator",
+description:"A Simple Payslip Generator",
+  tech: ["React.js", "Tailwind CSS"],
+  images: ["https://i.ibb.co/vvBHC6Jq/Screenshot-20250808-224436-Chrome.jpg,https://i.ibb.co/M5y5Mphw/Screenshot-20250808-224853-Chrome.jpg,https://i.ibb.co/chdpcM4Z/Screenshot-20250808-224834-Chrome.jpg"],
+  github: "https://github.com/Manigandan13/Payslip-Generator",
+  live: "https://payslip-generator-one.vercel.app",
+  },
   {
     title: "Automated Trading Bot (WIP)",
     description: "Python-based bot to auto-trade via Telegram signals and MetaTrader 5. Still under development.",
